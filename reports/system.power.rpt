@@ -1,0 +1,328 @@
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : system
+Version: X-2025.06-SP1
+Date   : Fri Oct 31 17:32:26 2025
+****************************************
+
+
+Library(s) Used:
+
+    saed14rvt_tt0p8v25c (File: /share/synopsys/libs/SAED14nm_PDK/lib/stdcell_rvt/db_nldm/saed14rvt_tt0p8v25c.db)
+    saed14hvt_tt0p8v25c (File: /share/synopsys/libs/SAED14nm_PDK/lib/stdcell_hvt/db_nldm/saed14hvt_tt0p8v25c.db)
+    saed14lvt_tt0p8v25c (File: /share/synopsys/libs/SAED14nm_PDK/lib/stdcell_lvt/db_nldm/saed14lvt_tt0p8v25c.db)
+    saed14sram_tt0p8v25c (File: /share/synopsys/libs/SAED14nm_PDK/lib/sram/logic_synth/single/saed14sram_tt0p8v25c.db)
+    saed14io_fc_tt0p8v25c_1p8v (File: /share/synopsys/libs/SAED14nm_PDK/lib/io_std/db_nldm/saed14io_fc_tt0p8v25c_1p8v.db)
+
+Information: The library cell 'SAEDLVT14_AOINV_IW_4' in the library 'saed14lvt_tt0p8v25c' is not characterized for internal power. (PWR-227)
+Information: The library cell 'SAEDLVT14_LSRDPQ_2' in the library 'saed14lvt_tt0p8v25c' is not characterized for internal power. (PWR-227)
+Information: The design contains cells, other than constants and black boxes, that are not characterized for internal power. (PWR-228)
+
+Operating Conditions: tt0p8v25c_i0p8v   Library: saed14lvt_dlvl_tt0p8v25c_i0p8v
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+system                 140000            saed14lvt_dlvl_tt0p8v25c_i0p8v
+
+
+Global Operating Voltage = 0.8  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+system                                 3.20e+05 3.57e+03 1.00e+09 3.25e+05 100.0
+  u_wishbone_arbiter (wishbone_arbiter)    1.309    0.964 2.93e+05    2.566   0.0
+    lt_x_3 (wishbone_arbiter_DW_cmp_J19_2) 3.34e-03 4.86e-03 9.03e+03 1.72e-02   0.0
+    lt_x_4 (wishbone_arbiter_DW_cmp_J19_1) 3.33e-03 7.82e-03 1.30e+04 2.42e-02   0.0
+    lt_x_5 (wishbone_arbiter_DW_cmp_J19_0) 3.55e-03 4.85e-03 1.11e+04 1.95e-02   0.0
+  u_interrupt_controller1 (interrupt_controller_0)    2.034    9.251 8.20e+04   11.367   0.0
+  u_interrupt_controller0 (interrupt_controller_1)    2.029    9.251 8.44e+04   11.364   0.0
+  u_timer_module (timer_module)           1.525    8.766 1.23e+05   10.415   0.0
+    sub_x_1 (timer_module_DW01_sub_J21_5)    0.000    0.000 2.11e+03 2.11e-03   0.0
+    sub_x_2 (timer_module_DW01_sub_J21_4) 3.80e-05      N/A 2.77e+03 2.81e-03   0.0
+    sub_x_3 (timer_module_DW01_dec_J21_2) 3.80e-05      N/A 3.52e+03 3.55e-03   0.0
+    sub_x_4 (timer_module_DW01_sub_J21_3)    0.000    0.000 2.10e+03 2.10e-03   0.0
+    sub_x_5 (timer_module_DW01_sub_J21_2) 3.80e-05      N/A 2.85e+03 2.89e-03   0.0
+    sub_x_6 (timer_module_DW01_dec_J21_1) 3.80e-05      N/A 3.59e+03 3.62e-03   0.0
+    sub_x_7 (timer_module_DW01_sub_J21_1)    0.000    0.000 2.10e+03 2.10e-03   0.0
+    sub_x_8 (timer_module_DW01_sub_J21_0) 3.80e-05      N/A 2.85e+03 2.89e-03   0.0
+    sub_x_9 (timer_module_DW01_dec_J21_0) 3.80e-05      N/A 3.59e+03 3.62e-03   0.0
+  u_test_module (test_module)          2.47e-02    5.231 4.88e+04    5.305   0.0
+    sub_x_4 (test_module_DW01_dec_J22_1)    0.000    0.000 1.32e+03 1.32e-03   0.0
+    sub_x_8 (test_module_DW01_dec_J22_0) 3.80e-05      N/A 1.27e+03 1.30e-03   0.0
+  u_uart1 (uart_0)                        5.507   23.410 2.22e+05   29.139   0.0
+    add_x_1 (uart_0_DW01_inc_J5_8_0)      0.000    0.000 1.12e+03 1.12e-03   0.0
+    add_x_2 (uart_0_DW01_inc_J5_7_0)      0.000    0.000 1.36e+03 1.36e-03   0.0
+    add_x_3 (uart_0_DW01_inc_J5_6_0)      0.000    0.000 1.01e+03 1.01e-03   0.0
+    sub_x_4 (uart_0_DW01_dec_J5_1_0)   7.60e-05      N/A  699.542 7.67e-04   0.0
+    add_x_7 (uart_0_DW01_inc_J5_5_0)   2.06e-02 2.10e-02 6.49e+03 4.82e-02   0.0
+    lte_x_28 (uart_0_DW_cmp_J5_2_0)       0.000    0.000  167.120 1.67e-04   0.0
+    add_x_30 (uart_0_DW01_inc_J5_4_0)     0.000    0.000 1.01e+03 1.01e-03   0.0
+    add_x_31 (uart_0_DW01_inc_J5_3_0)     0.000    0.000 1.01e+03 1.01e-03   0.0
+    add_x_32 (uart_0_DW01_inc_J5_2_0)     0.000    0.000 1.01e+03 1.01e-03   0.0
+    sub_x_33 (uart_0_DW01_dec_J5_0_0)  7.60e-05      N/A  699.542 7.66e-04   0.0
+    add_x_47 (uart_0_DW01_inc_J5_1_0)  1.98e-02 2.45e-02 2.57e+03 4.68e-02   0.0
+    add_x_53 (uart_0_DW01_inc_J5_0_0)  3.27e-02 3.81e-02 2.54e+03 7.33e-02   0.0
+    eq_x_5 (uart_0_DW_cmp_J5_1_0)         0.000    0.000  734.390 7.34e-04   0.0
+    eq_x_6 (uart_0_DW_cmp_J5_0_0)         0.000    0.000  824.600 8.25e-04   0.0
+  u_uart0 (uart_1)                        5.507   23.423 2.23e+05   29.153   0.0
+    add_x_1 (uart_0_DW01_inc_J5_8_1)      0.000    0.000 1.12e+03 1.12e-03   0.0
+    add_x_2 (uart_0_DW01_inc_J5_7_1)      0.000    0.000 1.36e+03 1.36e-03   0.0
+    add_x_3 (uart_0_DW01_inc_J5_6_1)      0.000    0.000 1.01e+03 1.01e-03   0.0
+    sub_x_4 (uart_0_DW01_dec_J5_1_1)   7.60e-05      N/A  699.542 7.67e-04   0.0
+    add_x_7 (uart_0_DW01_inc_J5_5_1)   2.06e-02 2.10e-02 6.49e+03 4.82e-02   0.0
+    lte_x_28 (uart_0_DW_cmp_J5_2_1)       0.000    0.000  167.120 1.67e-04   0.0
+    add_x_30 (uart_0_DW01_inc_J5_4_1)     0.000    0.000 1.01e+03 1.01e-03   0.0
+    add_x_31 (uart_0_DW01_inc_J5_3_1)     0.000    0.000 1.01e+03 1.01e-03   0.0
+    add_x_32 (uart_0_DW01_inc_J5_2_1)     0.000    0.000 1.01e+03 1.01e-03   0.0
+    sub_x_33 (uart_0_DW01_dec_J5_0_1)  7.60e-05      N/A  699.542 7.66e-04   0.0
+    add_x_47 (uart_0_DW01_inc_J5_1_1)  1.92e-02 2.41e-02 2.57e+03 4.59e-02   0.0
+    add_x_53 (uart_0_DW01_inc_J5_0_1)  3.39e-02 3.94e-02 2.54e+03 7.58e-02   0.0
+    eq_x_5 (uart_0_DW_cmp_J5_1_1)         0.000    0.000  734.390 7.34e-04   0.0
+    eq_x_6 (uart_0_DW_cmp_J5_0_1)         0.000    0.000  824.600 8.25e-04   0.0
+  u_boot_mem_wrapper (boot_mem_wrapper)    0.195   83.437 4.01e+05   84.032   0.0
+    u_boot_mem (boot_mem)                 0.195   83.437 4.01e+05   84.032   0.0
+  u_iobuf (generic_iobuf)                 0.000    0.000 9.65e+08  964.901   0.3
+  u_eth_top (eth_top)                    44.577  146.364 1.35e+06  192.293   0.1
+    macstatus1 (eth_macstatus)            0.200    0.496 2.29e+04    0.719   0.0
+      gte_x_3 (eth_macstatus_DW_cmp_J9_4) 1.07e-04 7.47e-05 2.86e+03 3.05e-03   0.0
+      lte_x_4 (eth_macstatus_DW_cmp_J9_3) 8.21e-05 1.02e-05 2.85e+03 2.94e-03   0.0
+      lt_x_9 (eth_macstatus_DW_cmp_J9_2) 1.37e-04 1.40e-04 3.06e+03 3.33e-03   0.0
+      gt_x_13 (eth_macstatus_DW_cmp_J9_1) 1.26e-04 8.23e-05 2.86e+03 3.07e-03   0.0
+      eq_x_7 (eth_macstatus_DW_cmp_J9_0) 2.08e-04 4.52e-04  825.957 1.49e-03   0.0
+    wishbone (eth_wishbone)              27.186  101.637 8.11e+05  129.635   0.0
+      gt_x_13 (eth_wishbone_DW_cmp_J3_6) 1.26e-02 4.52e-02  480.636 5.83e-02   0.0
+      sub_x_20 (eth_wishbone_DW01_sub_J3_2)    0.000    0.000 2.41e+03 2.41e-03   0.0
+      sub_x_21 (eth_wishbone_DW01_sub_J3_1)    0.000    0.000 2.80e+03 2.80e-03   0.0
+      sub_x_22 (eth_wishbone_DW01_sub_J3_0)    0.000    0.000 2.53e+03 2.53e-03   0.0
+      sub_x_23 (eth_wishbone_DW01_dec_J3_0)    0.000    0.000 2.78e+03 2.78e-03   0.0
+      add_x_27 (eth_wishbone_DW01_inc_J3_5)    0.000    0.000 7.98e+03 7.98e-03   0.0
+      lte_x_34 (eth_wishbone_DW_cmp_J3_5)    0.000    0.000  903.200 9.03e-04   0.0
+      add_x_37 (eth_wishbone_DW01_inc_J3_4)    0.000    0.000 7.98e+03 7.98e-03   0.0
+      add_x_39 (eth_wishbone_DW01_inc_J3_3)    0.000    0.000 7.98e+03 7.98e-03   0.0
+      lt_x_40 (eth_wishbone_DW_cmp_J3_4)    0.000    0.000   53.840 5.38e-05   0.0
+      gt_x_41 (eth_wishbone_DW_cmp_J3_3)    0.000    0.000  836.430 8.36e-04   0.0
+      lt_x_42 (eth_wishbone_DW_cmp_J3_2)    0.000    0.000   53.840 5.38e-05   0.0
+      gt_x_43 (eth_wishbone_DW_cmp_J3_1)    0.000    0.000  836.430 8.36e-04   0.0
+      add_x_118 (eth_wishbone_DW01_inc_J3_2)    0.000    0.000 1.57e+03 1.57e-03   0.0
+      add_x_119 (eth_wishbone_DW01_inc_J3_1)    0.000    0.000 1.57e+03 1.57e-03   0.0
+      add_x_156 (eth_wishbone_DW01_inc_J3_0)    0.000    0.000 7.98e+03 7.98e-03   0.0
+      gt_x_182 (eth_wishbone_DW_cmp_J3_0)    0.000    0.000  228.500 2.28e-04   0.0
+      rx_fifo (eth_fifo_DATA_WIDTH32_DEPTH16_CNT_WIDTH5_0)    7.006   32.454 2.34e+05   39.695   0.0
+        sub_x_1 (eth_fifo_DATA_WIDTH32_DEPTH16_CNT_WIDTH5_0_DW01_dec_J7_0)    0.000    0.000  699.530 7.00e-04   0.0
+        add_x_2 (eth_fifo_DATA_WIDTH32_DEPTH16_CNT_WIDTH5_0_DW01_inc_J7_0)    0.000    0.000 1.01e+03 1.01e-03   0.0
+      tx_fifo (eth_fifo_DATA_WIDTH32_DEPTH16_CNT_WIDTH5_1)    9.042   32.559 2.35e+05   41.836   0.0
+        sub_x_1 (eth_fifo_DATA_WIDTH32_DEPTH16_CNT_WIDTH5_1_DW01_dec_J6_0)    0.000    0.000  699.530 7.00e-04   0.0
+        add_x_2 (eth_fifo_DATA_WIDTH32_DEPTH16_CNT_WIDTH5_1_DW01_inc_J6_0)    0.000    0.000 1.01e+03 1.01e-03   0.0
+      bd_ram (eth_spram_256x32)           0.362   11.319 5.12e+04   11.732   0.0
+    rxethmac1 (eth_rxethmac)              1.459    3.438 8.96e+04    4.987   0.0
+      crcrx (eth_crc_0)                   0.562    1.172 1.72e+04    1.752   0.0
+      rxaddrcheck1 (eth_rxaddrcheck)   4.35e-02    0.109 2.06e+04    0.173   0.0
+        eq_x_3 (eth_rxaddrcheck_DW_cmp_J15_5)    0.000    0.000 1.88e+03 1.88e-03   0.0
+        eq_x_4 (eth_rxaddrcheck_DW_cmp_J15_4)    0.000    0.000 1.88e+03 1.88e-03   0.0
+        eq_x_5 (eth_rxaddrcheck_DW_cmp_J15_3)    0.000    0.000 1.88e+03 1.88e-03   0.0
+        eq_x_6 (eth_rxaddrcheck_DW_cmp_J15_2)    0.000    0.000 1.88e+03 1.88e-03   0.0
+        eq_x_7 (eth_rxaddrcheck_DW_cmp_J15_1)    0.000    0.000 1.88e+03 1.88e-03   0.0
+        eq_x_8 (eth_rxaddrcheck_DW_cmp_J15_0)    0.000    0.000 1.88e+03 1.88e-03   0.0
+      rxcounters1 (eth_rxcounters)        0.298    0.700 3.06e+04    1.028   0.0
+        add_x_1 (eth_rxcounters_DW01_inc_J10_1)    0.000    0.000 4.08e+03 4.08e-03   0.0
+        add_x_4 (eth_rxcounters_DW01_add_J10_0)    0.000    0.000 3.93e+03 3.93e-03   0.0
+        gt_x_5 (eth_rxcounters_DW_cmp_J10_2)    0.000    0.000  945.080 9.45e-04   0.0
+        lt_x_6 (eth_rxcounters_DW_cmp_J10_1)    0.000    0.000  909.230 9.09e-04   0.0
+        add_x_8 (eth_rxcounters_DW01_inc_J10_0) 4.47e-04 9.15e-04 1.02e+03 2.38e-03   0.0
+        eq_x_7 (eth_rxcounters_DW_cmp_J10_0) 4.78e-05 1.09e-04 3.55e+03 3.70e-03   0.0
+      rxstatem1 (eth_rxstatem)            0.109    0.237 3.76e+03    0.350   0.0
+    txethmac1 (eth_txethmac)              1.712    4.068 1.00e+05    5.881   0.0
+      eq_x_2 (eth_txethmac_DW_cmp_J17_0) 2.15e-04 4.53e-04  825.957 1.49e-03   0.0
+      random1 (eth_random)                0.221    0.574 1.34e+04    0.809   0.0
+        eq_x_19 (eth_random_DW_cmp_J16_9)    0.000    0.000 2.39e+03 2.39e-03   0.0
+      txcrc (eth_crc_1)                   0.590    1.578 1.76e+04    2.186   0.0
+      txstatem1 (eth_txstatem)            0.163    0.385 1.30e+04    0.561   0.0
+        gte_x_1 (eth_txstatem_DW_cmp_J17_3) 2.77e-04 3.56e-04  855.516 1.49e-03   0.0
+        gte_x_2 (eth_txstatem_DW_cmp_J17_2) 2.59e-04 3.29e-04  855.429 1.44e-03   0.0
+        lte_x_3 (eth_txstatem_DW_cmp_J17_1) 1.55e-03 1.14e-03  972.971 3.66e-03   0.0
+        ne_x_4 (eth_txstatem_DW_cmp_J17_0) 5.60e-04 1.56e-03 1.30e+03 3.42e-03   0.0
+      txcounters1 (eth_txcounters)        0.497    0.985 4.10e+04    1.523   0.0
+        add_x_1 (eth_txcounters_DW01_inc_J11_1) 5.11e-04 8.46e-04 4.08e+03 5.44e-03   0.0
+        sub_x_4 (eth_txcounters_DW01_sub_J11_0) 1.18e-03 4.29e-04 2.78e+03 4.38e-03   0.0
+        sub_x_5 (eth_txcounters_DW01_dec_J11_0) 5.60e-04 6.37e-04 3.15e+03 4.35e-03   0.0
+        gte_x_6 (eth_txcounters_DW_cmp_J11_1) 8.01e-04 1.07e-03 3.00e+03 4.88e-03   0.0
+        add_x_7 (eth_txcounters_DW01_inc_J11_0)    0.000    0.000 4.08e+03 4.08e-03   0.0
+        eq_x_10 (eth_txcounters_DW_cmp_J11_0) 4.78e-05 1.09e-04 3.55e+03 3.70e-03   0.0
+    maccontrol1 (eth_maccontrol)          1.252    2.838 8.19e+04    4.172   0.0
+      transmitcontrol1 (eth_transmitcontrol)    0.335    0.736 2.26e+04    1.093   0.0
+        add_x_9 (eth_transmitcontrol_DW01_add_J9_0)    0.000    0.000 1.01e+03 1.01e-03   0.0
+        add_x_10 (eth_transmitcontrol_DW01_inc_J9_0)    0.000    0.000 1.29e+03 1.29e-03   0.0
+      receivecontrol1 (eth_receivecontrol)    0.863    1.966 5.55e+04    2.884   0.0
+        add_x_24 (eth_receivecontrol_DW01_inc_J23_1)    0.000    0.000 1.01e+03 1.01e-03   0.0
+        sub_x_27 (eth_receivecontrol_DW01_dec_J23_0)    0.000    0.000 2.78e+03 2.78e-03   0.0
+        add_x_31 (eth_receivecontrol_DW01_inc_J23_0)    0.000    0.000 1.29e+03 1.29e-03   0.0
+        eq_x_1 (eth_receivecontrol_DW_cmp_J23_5)    0.000    0.000 1.88e+03 1.88e-03   0.0
+        eq_x_2 (eth_receivecontrol_DW_cmp_J23_4)    0.000    0.000 1.88e+03 1.88e-03   0.0
+        eq_x_3 (eth_receivecontrol_DW_cmp_J23_3)    0.000    0.000 1.88e+03 1.88e-03   0.0
+        eq_x_4 (eth_receivecontrol_DW_cmp_J23_2)    0.000    0.000 1.88e+03 1.88e-03   0.0
+        eq_x_5 (eth_receivecontrol_DW_cmp_J23_1)    0.000    0.000 1.88e+03 1.88e-03   0.0
+        eq_x_6 (eth_receivecontrol_DW_cmp_J23_0)    0.000    0.000 1.88e+03 1.88e-03   0.0
+    ethreg1 (eth_registers)               8.366   22.688 1.73e+05   31.226   0.0
+      lte_x_1 (eth_registers_DW_cmp_J9_1) 3.42e-03 5.61e-03 1.92e+03 1.09e-02   0.0
+      gt_x_5 (eth_registers_DW_cmp_J9_0) 5.13e-05 8.33e-05  365.351 5.00e-04   0.0
+      TXCTRL_2 (eth_register_1_0_0)    1.07e-02 7.79e-02  499.483 8.91e-02   0.0
+      TXCTRL_1 (eth_register_8_00_0)   8.54e-02    0.592 3.69e+03    0.681   0.0
+      TXCTRL_0 (eth_register_8_00_1)   8.63e-02    0.603 3.81e+03    0.693   0.0
+      RXHASH1_3 (eth_register_8_00_2)  8.54e-02    0.592 3.69e+03    0.681   0.0
+      RXHASH1_2 (eth_register_8_00_3)  8.63e-02    0.603 3.81e+03    0.693   0.0
+      RXHASH1_1 (eth_register_8_00_4)  8.54e-02    0.592 3.69e+03    0.681   0.0
+      RXHASH1_0 (eth_register_8_00_5)  8.63e-02    0.603 3.81e+03    0.693   0.0
+      RXHASH0_3 (eth_register_8_00_6)  8.54e-02    0.592 3.69e+03    0.681   0.0
+      RXHASH0_2 (eth_register_8_00_7)  8.63e-02    0.603 3.81e+03    0.693   0.0
+      RXHASH0_1 (eth_register_8_00_8)  8.54e-02    0.592 3.69e+03    0.681   0.0
+      RXHASH0_0 (eth_register_8_00_9)  8.63e-02    0.603 3.81e+03    0.693   0.0
+      MAC_ADDR1_1 (eth_register_8_00_10) 8.54e-02    0.592 3.69e+03    0.681   0.0
+      MAC_ADDR1_0 (eth_register_8_00_11) 8.63e-02    0.603 3.81e+03    0.693   0.0
+      MAC_ADDR0_3 (eth_register_8_00_12) 8.54e-02    0.592 3.69e+03    0.681   0.0
+      MAC_ADDR0_2 (eth_register_8_00_13) 8.54e-02    0.592 3.69e+03    0.681   0.0
+      MAC_ADDR0_1 (eth_register_8_00_14) 8.63e-02    0.603 3.81e+03    0.693   0.0
+      MAC_ADDR0_0 (eth_register_8_00_15) 8.54e-02    0.592 3.69e+03    0.681   0.0
+      MIIRX_DATA (eth_register_16_0000)    0.430    1.121 7.62e+03    1.559   0.0
+      MIITX_DATA_1 (eth_register_8_00_16) 8.53e-02    0.611 3.73e+03    0.700   0.0
+      MIITX_DATA_0 (eth_register_8_00_17) 8.54e-02    0.592 3.69e+03    0.681   0.0
+      MIIADDRESS_1 (eth_register_5_00_0) 5.29e-02    0.377 2.31e+03    0.432   0.0
+      MIIADDRESS_0 (eth_register_5_00_1) 5.38e-02    0.389 2.39e+03    0.445   0.0
+      MIICOMMAND2 (eth_register_WIDTH1_RESET_VALUE0_0) 1.07e-02 7.79e-02  499.483 8.91e-02   0.0
+      MIICOMMAND1 (eth_register_WIDTH1_RESET_VALUE0_1) 1.07e-02 7.79e-02  499.483 8.91e-02   0.0
+      MIICOMMAND0 (eth_register_WIDTH1_RESET_VALUE0_2) 1.07e-02 7.79e-02  504.383 8.91e-02   0.0
+      MIIMODER_1 (eth_register_1_0_1)  1.07e-02 7.79e-02  504.370 8.91e-02   0.0
+      MIIMODER_0 (eth_register_8_64)   8.62e-02    0.611 3.72e+03    0.701   0.0
+      CTRLMODER_0 (eth_register_3_0)   3.22e-02    0.234 1.45e+03    0.267   0.0
+      TX_BD_NUM_0 (eth_register_8_40_0) 8.65e-02    0.609 3.82e+03    0.700   0.0
+      COLLCONF_2 (eth_register_4_f)    4.39e-02    0.337 1.96e+03    0.383   0.0
+      COLLCONF_0 (eth_register_6_3f)   6.58e-02    0.501 2.82e+03    0.569   0.0
+      PACKETLEN_3 (eth_register_8_00_18) 8.53e-02    0.611 3.73e+03    0.700   0.0
+      PACKETLEN_2 (eth_register_8_40_1) 8.66e-02    0.609 3.82e+03    0.700   0.0
+      PACKETLEN_1 (eth_register_8_06)  8.61e-02    0.605 3.71e+03    0.695   0.0
+      PACKETLEN_0 (eth_register_8_00_19) 8.44e-02    0.599 3.64e+03    0.687   0.0
+      IPGR2_0 (eth_register_7_12_0)    7.60e-02    0.558 3.35e+03    0.637   0.0
+      IPGR1_0 (eth_register_7_0c)      7.58e-02    0.558 3.36e+03    0.637   0.0
+      IPGT_0 (eth_register_7_12_1)     7.47e-02    0.543 3.20e+03    0.621   0.0
+      INT_MASK_0 (eth_register_7_00)   7.54e-02    0.545 3.34e+03    0.624   0.0
+      MODER_2 (eth_register_1_0_2)     1.07e-02 7.79e-02  504.383 8.91e-02   0.0
+      MODER_1 (eth_register_8_a0)      6.48e-02    0.704 5.35e+03    0.774   0.0
+      MODER_0 (eth_register_8_00_20)   8.63e-02    0.603 3.81e+03    0.693   0.0
+    miim1 (eth_miim)                      1.551    6.141 4.53e+04    7.738   0.0
+      add_x_9 (eth_miim_DW01_inc_J18_0)    0.000    0.000 1.57e+03 1.57e-03   0.0
+      outctrl (eth_outputcontrol)      6.41e-02    0.455 4.96e+03    0.524   0.0
+        gt_x_1 (eth_outputcontrol_DW_cmp_J10_1)    0.000    0.000   94.870 9.49e-05   0.0
+        lt_x_2 (eth_outputcontrol_DW_cmp_J10_0)    0.000    0.000  244.040 2.44e-04   0.0
+      shftrg (eth_shiftreg)               0.688    1.801 1.37e+04    2.503   0.0
+      clkgen (eth_clockgen)               0.383    1.104 7.52e+03    1.495   0.0
+        sub_x_2 (eth_clockgen_DW01_dec_J22_1) 2.09e-04 2.04e-04 1.15e+03 1.56e-03   0.0
+        sub_x_3 (eth_clockgen_DW01_dec_J22_0) 8.93e-02 5.77e-02 1.25e+03    0.148   0.0
+  u_wb_rr_arb2 (wb_rr_arb2)               0.383    1.352 3.31e+04    1.768   0.0
+  u_amber1 (a25_core_0)                  42.271 1.65e+03 1.72e+07 1.71e+03   0.5
+    u_coprocessor (a25_coprocessor_0)     1.853   99.599 6.17e+05  102.068   0.0
+    u_wishbone (a25_wishbone_0)           2.394   96.031 8.88e+05   99.314   0.0
+    u_write_back (a25_write_back_0)       0.468   20.926 1.95e+05   21.589   0.0
+    u_mem (a25_mem_0)                     2.141  116.260 1.18e+06  119.578   0.0
+      lt_x_1 (a25_mem_0_DW_cmp_J19_2)  8.32e-03 8.78e-03 9.03e+03 2.61e-02   0.0
+      lt_x_2 (a25_mem_0_DW_cmp_J19_1)  7.43e-03 1.35e-02 1.52e+04 3.61e-02   0.0
+      lt_x_3 (a25_mem_0_DW_cmp_J19_0)  6.16e-03 8.33e-03 1.37e+04 2.82e-02   0.0
+      u_dcache (a25_dcache_0)             1.621   89.689 8.37e+05   92.147   0.0
+        add_x_3 (a25_dcache_0_DW01_inc_J20_0) 4.79e-04 1.14e-03 2.24e+03 3.85e-03   0.0
+        eq_x_24 (a25_dcache_0_DW_cmp_J20_5) 4.17e-03 5.32e-03 3.67e+04 4.62e-02   0.0
+        eq_x_28 (a25_dcache_0_DW_cmp_J20_4) 4.80e-03 2.28e-03 3.82e+04 4.52e-02   0.0
+        eq_x_37 (a25_dcache_0_DW_cmp_J20_3)    0.146    0.360 3.30e+04    0.539   0.0
+        eq_x_38 (a25_dcache_0_DW_cmp_J20_2)    0.142    0.362 3.17e+04    0.535   0.0
+        eq_x_39 (a25_dcache_0_DW_cmp_J20_1)    0.147    0.362 3.30e+04    0.542   0.0
+        eq_x_40 (a25_dcache_0_DW_cmp_J20_0)    0.144    0.361 3.42e+04    0.539   0.0
+    u_execute (a25_execute_0)            19.609  941.487 1.08e+07  971.943   0.3
+      add_x_8 (a25_execute_0_DW01_add_J4_3_0)    0.151    0.153 4.75e+04    0.351   0.0
+      sub_x_9 (a25_execute_0_DW01_sub_J4_0_0)    0.218 9.61e-02 3.12e+04    0.345   0.0
+      add_x_10 (a25_execute_0_DW01_add_J4_2_0) 3.14e-03 7.60e-03 4.73e+04 5.80e-02   0.0
+      add_x_11 (a25_execute_0_DW01_add_J4_1_0) 2.75e-03    0.466 5.64e+04    0.525   0.0
+      add_x_12 (a25_execute_0_DW01_add_J4_0_0) 2.42e-03 3.34e-03 4.26e+04 4.84e-02   0.0
+      u_register_bank (a25_register_bank_0)   10.020  754.779 7.32e+06  772.116   0.2
+      u_multiply (a25_multiply_0)         3.300   40.766 6.59e+05   44.726   0.0
+        add_x_1 (a25_multiply_0_DW01_inc_J23_1_0) 1.14e-03 2.99e-03 5.12e+04 5.53e-02   0.0
+        add_x_3 (a25_multiply_0_DW01_add_J23_1_0) 5.67e-02    0.222 1.23e+05    0.402   0.0
+        add_x_4 (a25_multiply_0_DW01_add_J23_0_0)    0.765    0.913 1.02e+05    1.780   0.0
+        add_x_6 (a25_multiply_0_DW01_inc_J23_0_0) 4.61e-04 9.19e-04 1.29e+03 2.67e-03   0.0
+      u_alu (a25_alu_0)                8.85e-02    4.659 3.60e+05    5.107   0.0
+        add_x_7 (a25_alu_0_DW01_add_J18_1_0) 4.87e-03 4.41e-03 3.98e+04 4.90e-02   0.0
+        add_x_8 (a25_alu_0_DW01_add_J18_0_0) 1.35e-02 4.70e-02 4.64e+04    0.107   0.0
+      u_barrel_shift (a25_barrel_shift_0) 7.91e-02 2.25e-02 5.61e+05    0.663   0.0
+    u_decode (a25_decode_0)              11.271  270.152 2.41e+06  283.830   0.1
+      gt_x_33 (a25_decode_0_DW_cmp_J2_7_0) 1.18e-02 1.10e-02 1.36e+03 2.41e-02   0.0
+      add_x_491 (a25_decode_0_DW01_add_J2_0_0) 6.89e-02    0.118 1.97e+04    0.207   0.0
+    u_fetch (a25_fetch_0)                 4.224  105.560 1.01e+06  110.794   0.0
+      lt_x_1 (a25_fetch_0_DW_cmp_J11_2_0) 8.44e-03 1.61e-02 5.39e+03 3.00e-02   0.0
+      lt_x_2 (a25_fetch_0_DW_cmp_J11_1_0) 9.89e-03 2.22e-02 3.85e+03 3.59e-02   0.0
+      lt_x_3 (a25_fetch_0_DW_cmp_J11_0_0) 8.45e-03 1.61e-02 5.39e+03 3.00e-02   0.0
+      u_cache (a25_icache_0)              3.427  104.832 9.06e+05  109.166   0.0
+        add_x_3 (a25_icache_0_DW01_inc_J15_0_0)    0.000    0.000 2.24e+03 2.24e-03   0.0
+        ne_x_17 (a25_icache_0_DW_cmp_J15_5_0)    0.519    0.630 5.38e+04    1.202   0.0
+        eq_x_21 (a25_icache_0_DW_cmp_J15_4_0)    0.105 3.57e-02 4.75e+04    0.188   0.0
+        eq_x_26 (a25_icache_0_DW_cmp_J15_3_0)    0.205    0.279 3.32e+04    0.517   0.0
+        eq_x_27 (a25_icache_0_DW_cmp_J15_2_0)    0.205    0.280 3.32e+04    0.518   0.0
+        eq_x_28 (a25_icache_0_DW_cmp_J15_1_0)    0.203    0.299 3.26e+04    0.534   0.0
+        eq_x_29 (a25_icache_0_DW_cmp_J15_0_0)    0.202    0.303 3.25e+04    0.538   0.0
+  u_amber0 (a25_core_1)                  47.903 1.61e+03 1.70e+07 1.68e+03   0.5
+    u_coprocessor (a25_coprocessor_1)     1.956  101.672 6.04e+05  104.232   0.0
+    u_wishbone (a25_wishbone_1)           3.082   93.420 8.94e+05   97.395   0.0
+    u_write_back (a25_write_back_1)       0.488   21.266 1.98e+05   21.952   0.0
+    u_mem (a25_mem_1)                     2.351  116.222 1.18e+06  119.754   0.0
+      lt_x_1 (a25_mem_1_DW_cmp_J13_2)  2.31e-02 4.87e-02 1.40e+04 8.58e-02   0.0
+      lt_x_2 (a25_mem_1_DW_cmp_J13_1)  2.10e-02 3.75e-02 1.26e+04 7.10e-02   0.0
+      lt_x_3 (a25_mem_1_DW_cmp_J13_0)  1.83e-02 2.56e-02 1.28e+04 5.67e-02   0.0
+      u_dcache (a25_dcache_1)             1.711   89.808 8.50e+05   92.369   0.0
+        add_x_3 (a25_dcache_1_DW01_inc_J16_0) 4.47e-04 1.04e-03 2.24e+03 3.72e-03   0.0
+        eq_x_24 (a25_dcache_1_DW_cmp_J16_5) 1.80e-02 2.52e-02 3.18e+04 7.51e-02   0.0
+        eq_x_28 (a25_dcache_1_DW_cmp_J16_4) 2.07e-02 9.79e-03 3.90e+04 6.95e-02   0.0
+        eq_x_37 (a25_dcache_1_DW_cmp_J16_3)    0.149    0.362 3.24e+04    0.544   0.0
+        eq_x_38 (a25_dcache_1_DW_cmp_J16_2)    0.154    0.357 3.39e+04    0.545   0.0
+        eq_x_39 (a25_dcache_1_DW_cmp_J16_1)    0.165    0.361 3.53e+04    0.561   0.0
+        eq_x_40 (a25_dcache_1_DW_cmp_J16_0)    0.153    0.355 3.39e+04    0.542   0.0
+    u_execute (a25_execute_1)            22.167  893.252 1.07e+07  926.111   0.3
+      add_x_8 (a25_execute_0_DW01_add_J4_3_1)    0.159    0.160 4.61e+04    0.365   0.0
+      sub_x_9 (a25_execute_0_DW01_sub_J4_0_1)    0.222    0.105 3.10e+04    0.358   0.0
+      add_x_10 (a25_execute_0_DW01_add_J4_2_1) 1.32e-02 3.18e-02 4.92e+04 9.42e-02   0.0
+      add_x_11 (a25_execute_0_DW01_add_J4_1_1) 1.27e-02    0.483 5.95e+04    0.555   0.0
+      add_x_12 (a25_execute_0_DW01_add_J4_0_1) 5.42e-03 8.03e-03 7.87e+04 9.21e-02   0.0
+      u_register_bank (a25_register_bank_1)   10.782  705.568 6.98e+06  723.333   0.2
+      u_multiply (a25_multiply_1)         3.528   39.877 6.60e+05   44.065   0.0
+        add_x_1 (a25_multiply_0_DW01_inc_J23_1_1) 3.88e-03 8.10e-03 6.01e+04 7.21e-02   0.0
+        add_x_3 (a25_multiply_0_DW01_add_J23_1_1)    0.110    0.335 1.39e+05    0.585   0.0
+        add_x_4 (a25_multiply_0_DW01_add_J23_0_1)    0.660    0.900 8.65e+04    1.647   0.0
+        add_x_6 (a25_multiply_0_DW01_inc_J23_0_1) 4.00e-04 8.08e-04 1.29e+03 2.50e-03   0.0
+      u_alu (a25_alu_1)                   0.352    5.123 4.78e+05    5.953   0.0
+        add_x_7 (a25_alu_0_DW01_add_J18_1_1) 1.35e-02 1.20e-02 6.23e+04 8.77e-02   0.0
+        add_x_8 (a25_alu_0_DW01_add_J18_0_1) 9.00e-02    0.206 1.37e+05    0.432   0.0
+      u_barrel_shift (a25_barrel_shift_1)    0.304    0.102 5.60e+05    0.967   0.0
+    u_decode (a25_decode_1)              13.061  280.276 2.40e+06  295.737   0.1
+      gt_x_33 (a25_decode_0_DW_cmp_J2_7_1) 1.24e-02 1.17e-02 1.38e+03 2.55e-02   0.0
+      add_x_491 (a25_decode_0_DW01_add_J2_0_1) 7.89e-02    0.127 1.97e+04    0.226   0.0
+    u_fetch (a25_fetch_1)                 4.380  107.129 1.02e+06  112.527   0.0
+      lt_x_1 (a25_fetch_0_DW_cmp_J11_2_1) 8.13e-03 1.57e-02 5.39e+03 2.93e-02   0.0
+      lt_x_2 (a25_fetch_0_DW_cmp_J11_1_1) 9.34e-03 2.12e-02 5.54e+03 3.61e-02   0.0
+      lt_x_3 (a25_fetch_0_DW_cmp_J11_0_1) 8.14e-03 1.57e-02 5.39e+03 2.93e-02   0.0
+      u_cache (a25_icache_1)              3.591  106.254 9.14e+05  110.759   0.0
+        add_x_3 (a25_icache_0_DW01_inc_J15_0_1)    0.000    0.000 2.24e+03 2.24e-03   0.0
+        ne_x_17 (a25_icache_0_DW_cmp_J15_5_1)    0.538    0.671 5.42e+04    1.264   0.0
+        eq_x_21 (a25_icache_0_DW_cmp_J15_4_1)    0.105 7.52e-03 4.66e+04    0.160   0.0
+        eq_x_26 (a25_icache_0_DW_cmp_J15_3_1)    0.202    0.270 3.22e+04    0.504   0.0
+        eq_x_27 (a25_icache_0_DW_cmp_J15_2_1)    0.205    0.284 3.31e+04    0.522   0.0
+        eq_x_28 (a25_icache_0_DW_cmp_J15_1_1)    0.205    0.286 3.31e+04    0.524   0.0
+        eq_x_29 (a25_icache_0_DW_cmp_J15_0_1)    0.203    0.272 3.22e+04    0.507   0.0
+  u_clocks_resets (clocks_resets)      3.20e+05      N/A 1.75e+03 3.20e+05  98.5
+1
